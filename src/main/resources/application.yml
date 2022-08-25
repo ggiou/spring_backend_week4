@@ -1,0 +1,29 @@
+spring:
+  h2:
+    console:
+      enabled: true
+
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+        hibernate:
+          format_sql: true
+          show_sql: true
+
+
+logging:
+  level:
+    com.example : DEBUG
+
+# $ echo 'spring-boot-security-jwt-tutorial-jiwoon-spring-boot-security-jwt-tutorial' | base64
+jwt:
+  secret: 1c12b1b6251c7b80d0364bbd2f3d646527bdd90ac8d94a2a5194ab187b1c92cd7369d3a6ef93444554be5004c2f51269c8f044f02aa3da38f62aed041753613b
+
